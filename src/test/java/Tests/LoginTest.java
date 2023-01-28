@@ -8,7 +8,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void loginPositiveTest() {
-      //  driver.get(baseUrl + "/autentificare");
+      driver.get(baseUrl + "/autentificare");
         LoginPage lp = new LoginPage(driver);
         lp.verifyPage();
         lp.login("", "12345678");

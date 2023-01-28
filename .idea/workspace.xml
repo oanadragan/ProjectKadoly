@@ -4,49 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e50149de-8deb-4395-91c4-bf76dde0e4c5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mySuiteTestRegression.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mySuiteTestSmoke.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/AddToCartPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/CheckCartPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/HistoryPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/LogoutPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/MyAccountPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/RegistrationPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/RegistrationPage1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/SelectPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Resources/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Resources/config2.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Resources/config3.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/BaseTest1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/CartTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/LoginTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/MyAccountTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/RegistrationDataTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/RegistrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/Browser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/BrowserTypes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/BrowserUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/ChromeBrowser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/ConfigUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/ConstantUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/EdgeBrowser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/FirefoxBrowser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/GenericUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/SeleniumUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/Tools.java" afterDir="false" />
+    <list default="true" id="e50149de-8deb-4395-91c4-bf76dde0e4c5" name="Changes" comment="Final Project">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/LoginTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +58,7 @@
       <recent name="Utils" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CartTest.checkCart">
+  <component name="RunManager" selected="TestNG.LoginTest.loginPositiveTest">
     <configuration name="C:/Users/a-oanadragan/IdeaProjects/ProjectKadoly/mySuiteTestSmoke.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ProjectKadoly" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/mySuiteTestSmoke.xml" />
@@ -120,6 +80,24 @@
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.CartTest" />
       <option name="METHOD_NAME" value="checkCart" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest.loginPositiveTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ProjectKadoly" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.LoginTest" />
+      <option name="METHOD_NAME" value="loginPositiveTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -163,31 +141,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyAccountTest.deleteCart" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ProjectKadoly" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.MyAccountTest" />
-      <option name="METHOD_NAME" value="deleteCart" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LoginTest.loginPositiveTest" />
         <item itemvalue="TestNG.CartTest.checkCart" />
         <item itemvalue="TestNG.MyAccountTest.checkCart" />
         <item itemvalue="TestNG.C:/Users/a-oanadragan/IdeaProjects/ProjectKadoly/mySuiteTestSmoke.xml" />
         <item itemvalue="TestNG.MyAccountTest.AddToCartTest" />
-        <item itemvalue="TestNG.MyAccountTest.deleteCart" />
       </list>
     </recent_temporary>
   </component>
@@ -200,6 +160,14 @@
       <option name="presentableId" value="Default" />
       <updated>1674638867688</updated>
     </task>
+    <task id="LOCAL-00001" summary="Final Project">
+      <created>1674838869572</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1674838869572</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -212,5 +180,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Final Project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final Project" />
   </component>
 </project>
