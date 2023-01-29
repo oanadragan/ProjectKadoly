@@ -1,0 +1,34 @@
+[
+  {
+    "account": {
+      "username": "user@test.com",
+      "password": ""
+    },
+    "userError": "",
+    "passwordError": "Parola este obligatorie"
+  },
+  {
+    "account": {
+      "username": "",
+      "password": "test"
+    },
+    "userError": "Adresa de e-mail este obligatorie",
+    "passwordError": ""
+  },
+  {
+    "account": {
+      "username": "",
+      "password": ""
+    },
+    "userError": "Adresa de e-mail este obligatorie",
+    "passwordError": ""
+  },
+  {
+    "account": {
+      "username": "user.test.com",
+      "password": ""
+    },
+    "userError": "Adresa de e-mail este invalida",
+    "passwordError": ""
+  }
+]
