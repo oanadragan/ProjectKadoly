@@ -39,7 +39,7 @@ public class LoginDataTest extends BaseTest{
         System.out.println("Open Login page");
         driver.get(baseUrl + "/autentificare");
 
-//         login
+        loginPage.verifyPage();
         loginPage.login(lm.getAccount().getUsername(), lm.getAccount().getPassword());
         System.out.println("Login button was pressed");
 

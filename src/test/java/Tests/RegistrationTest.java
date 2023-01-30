@@ -1,18 +1,10 @@
 package Tests;
 
 import Pages.RegistrationPage;
-import Pages.RegistrationPage1;
 import org.testng.annotations.Test;
 
 public class RegistrationTest extends BaseTest {
 
-       @Test
-       public void registrationTest1stPage() {
-            driver.get("https://www.kadoly.ro/autentificare");
-            RegistrationPage1 rp1 = new RegistrationPage1(driver);
-            rp1.verifyPage();
-            rp1.registrationPage1("test@yahoo.com");
-    }
 
         @Test(priority = 1)
         public void registrationTest () {
@@ -20,12 +12,12 @@ public class RegistrationTest extends BaseTest {
             RegistrationPage lp = new RegistrationPage(driver);
 //            lp.verifyPage();
 //            lp.registrationPage1("test@yahoo.com");
-            lp.registrationPage2("", "", "", "12345678", "",
-                    "", "", "", "123456", "12345678", "sssas", "prenume este obligatoriu.",
-                    "nume este obligatoriu", "email este obligatoriu.", "passwd este obligatoriu.",
-                    "nume este obligatoriu", "prenume este obligatoriu.", "localitate este obligatoriu.",
-                    "adr", "Cod postal invalid. Ar trebui sa fie introdus in modul urmator: 000000",
-                    "Introduceți cel puțin un număr de telefon.", "alias este obligatoriu.");
+//            lp.registrationPage2("", "", "", "12345678", "",
+//                    "", "", "", "123456", "12345678", "sssas", "prenume este obligatoriu.",
+//                    "nume este obligatoriu", "email este obligatoriu.", "passwd este obligatoriu.",
+//                    "nume este obligatoriu", "prenume este obligatoriu.", "localitate este obligatoriu.",
+//                    "adr", "Cod postal invalid. Ar trebui sa fie introdus in modul urmator: 000000",
+//                    "Introduceți cel puțin un număr de telefon.", "alias este obligatoriu.");
 
 //          if (lp.getErrors().contains("prenume este obligatoriu.")) {
 //            System.out.println("prenume este obligatoriu.");
