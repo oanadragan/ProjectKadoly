@@ -12,16 +12,15 @@ import org.testng.Assert;
 public class AddToCartPage extends BasePage {
 
     private String filterBtn = "#selectProductSort"; // CSS
-    //  private String filterOption = "#selectProductSort > option:nth-child(2)"; // CSS
     private String sortText = "#productsSortForm > div > label"; //CSS
-
     private String productSelector = "#center_column > div.hide-color-options.hide-stock-info.hide-quickview > ul > li:nth-child(1) > div.product-container"; //CSS
-
     private String addToCartSelector = "#add_to_cart > button"; //CSS
     private String productDescription = "#center_column > div:nth-child(2) > div.primary_block.row > div.pb-center-column.col-xs-12.col-sm-7.col-md-7 > h1"; //CSS
     private String confirmSelector = "#layer_cart > div:nth-child(1)"; //CSS
 
     private String confirmCartSelector= "#sticky_top > div.shopping_cart_right.col-md-3.clearfix > div > a"; //CSS
+
+
     public AddToCartPage(WebDriver driver) {
         super(driver);
     }
@@ -34,7 +33,6 @@ public class AddToCartPage extends BasePage {
     }
 
     public void selectProduct(){
-
         WebElement productEl = driver.findElement(By.cssSelector(productSelector));
         productEl.click();
 

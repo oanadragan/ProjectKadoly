@@ -19,7 +19,7 @@ public class BaseTest {
     String baseUrl = GenericUtils.createBaseUrl(usedConfig);
     Base64 base64 = new Base64();
 
-    @BeforeTest
+    @BeforeTest (groups = {"Smoke",  "Regression"}, alwaysRun = true)
     public void beforeTest() {
         System.out.println(baseUrl);
         driver = BrowserUtils.getBrowser(browser, usedConfig);

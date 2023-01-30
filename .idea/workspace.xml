@@ -5,23 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e50149de-8deb-4395-91c4-bf76dde0e4c5" name="Changes" comment="Final Project">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/RegistrationAccountModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/RegistrationModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/RegistrationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/RegistrationPage1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Resources/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Resources/config2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Resources/config2.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Resources/config3.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Resources/configData.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Resources/configData.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mySuiteTestRegression.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mySuiteTestRegression.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mySuiteTestSmoke.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mySuiteTestSmoke.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/Resources/Data/logindata.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Resources/Data/logindata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/Resources/configData.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Resources/configData.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/AddToCartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/AddToCartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/SelectPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/SelectPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/LoginDataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/LoginDataTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/LoginTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/MyAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/MyAccountTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/RegistrationDataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/RegistrationDataTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/RegistrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Utils/ConstantUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utils/ConstantUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/RegistrationTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,25 +72,7 @@
       <recent name="Utils" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.RegistrationDataTest.loginWithDBTest">
-    <configuration name="CartTest.AddToCartTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ProjectKadoly" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.CartTest" />
-      <option name="METHOD_NAME" value="AddToCartTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="LoginDataTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ProjectKadoly" />
       <extension name="coverage">
@@ -165,13 +143,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RegistrationDataTest.registerWithDBTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ProjectKadoly" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.RegistrationDataTest" />
+      <option name="METHOD_NAME" value="registerWithDBTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.RegistrationDataTest.registerWithDBTest" />
         <item itemvalue="TestNG.RegistrationDataTest.loginWithDBTest" />
         <item itemvalue="TestNG.RegistrationDataTest" />
         <item itemvalue="TestNG.LoginDataTest" />
         <item itemvalue="TestNG.LoginDataTest.loginWithJsonTest" />
-        <item itemvalue="TestNG.CartTest.AddToCartTest" />
       </list>
     </recent_temporary>
   </component>
@@ -212,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674996781743</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Final Project">
+      <created>1675094165751</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675094165751</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -229,5 +232,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Final Project" />
     <option name="LAST_COMMIT_MESSAGE" value="Final Project" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="TestNG">
+        <watch expression="add.driver" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

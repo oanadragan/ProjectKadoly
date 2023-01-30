@@ -30,5 +30,13 @@
     },
     "userError": "Adresa de e-mail este invalida",
     "passwordError": ""
+  },
+  {
+    "account": {
+      "username": "test2@gmail.com",
+      "password": "12345678"
+    },
+    "userError": "",
+    "passwordError": ""
   }
 ]

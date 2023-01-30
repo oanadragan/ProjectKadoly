@@ -26,7 +26,7 @@ public class RegistrationDataTest extends BaseTest {
         Collection<Object[]> dp = new ArrayList<>();
         try {
             Connection connection = DriverManager.getConnection("jdbc:mysql://" + dbHostname + ":" + dbPort
-                    + "/" + dbSchema, dbUser, dbPassword);
+                    + "/" + dbSchema, dbUser, new String(base64.decode(dbPassword.getBytes())));
 
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM registration");

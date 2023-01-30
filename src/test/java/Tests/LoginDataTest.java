@@ -2,6 +2,7 @@ package Tests;
 
 import Pages.LoginModel;
 import Pages.LoginPage;
+import Pages.LogoutPage;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -54,6 +55,10 @@ public class LoginDataTest extends BaseTest{
         Assert.assertTrue(loginPage.checkErr(expectedPasswordErr, "passwordError"));
     }
 
+    @Test(dependsOnMethods = {"loginWithJsonTest"})
+    public void logoutTest() {
+        LogoutPage lp1 = new LogoutPage(driver);
+        lp1.logout();
 
-
+    }
 }

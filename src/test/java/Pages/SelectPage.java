@@ -22,7 +22,6 @@ public class SelectPage extends BasePage{
 
     public void hoverButtonInteract() {
         WebElement hoverButton = driver.findElement(By.cssSelector(menSelector));
-//        hoverButton.click();
         Actions actions = new Actions(driver);
         actions.moveToElement(hoverButton).build().perform();
         driver.findElement(By.xpath(menGifts)).click();

@@ -9,7 +9,7 @@ public class MyAccountTest extends BaseTest{
 
     @Test
     public void generalHomePage(){
-        driver.get("https://www.kadoly.ro/");
+        driver.get("baseUrl");
         HomePage hp = new HomePage(driver);
         hp.verifyPage();
         hp.verifySearchBar();
