@@ -5,19 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e50149de-8deb-4395-91c4-bf76dde0e4c5" name="Changes" comment="Final Project">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/MyAddressPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mySuiteTestRegression.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mySuiteTestRegression.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mySuiteTestSmoke.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mySuiteTestSmoke.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/Resources/Data/logindata.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Resources/Data/logindata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/Resources/configData.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Resources/configData.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/AddToCartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/AddToCartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/SelectPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/SelectPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/LoginDataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/LoginDataTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/LoginTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/MyAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/MyAccountPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/RegistrationPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/MyAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/MyAccountTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/RegistrationDataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/RegistrationDataTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/RegistrationTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +45,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "C:/Users/a-oanadragan/IdeaProjects/ProjectKadoly/src/test/java/Resources",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
   }
@@ -72,25 +66,64 @@
       <recent name="Utils" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="LoginDataTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.MyAccountTest.updateAddressTest">
+    <configuration name="MyAccountTest.changePersonalInfoTest" type="TestNG" nameIsGenerated="true">
       <module name="ProjectKadoly" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.LoginDataTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="Tests.MyAccountTest" />
+      <option name="METHOD_NAME" value="changePersonalInfoTest" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginDataTest.loginWithJsonTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="MyAccountTest.changePersonalInfoTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ProjectKadoly" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.MyAccountTest" />
+      <option name="METHOD_NAME" value="changePersonalInfoTest" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyAccountTest.updateAddressTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ProjectKadoly" />
       <extension name="coverage">
         <pattern>
@@ -99,9 +132,30 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.LoginDataTest" />
-      <option name="METHOD_NAME" value="loginWithJsonTest" />
+      <option name="MAIN_CLASS_NAME" value="Tests.MyAccountTest" />
+      <option name="METHOD_NAME" value="updateAddressTest" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NewSuite" type="TestNG">
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="Smoke" />
+      <option name="TEST_OBJECT" value="GROUP" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
@@ -161,13 +215,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Smoke" type="TestNG">
+      <module name="ProjectKadoly" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/mySuiteTestSmoke.xml" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="TestNG.Smoke" />
+      <item itemvalue="TestNG.NewSuite" />
+      <item itemvalue="TestNG.MyAccountTest.changePersonalInfoTest (1)" />
+      <item itemvalue="TestNG.MyAccountTest.updateAddressTest" />
+      <item itemvalue="TestNG.MyAccountTest.changePersonalInfoTest" />
+      <item itemvalue="TestNG.RegistrationDataTest" />
+      <item itemvalue="TestNG.RegistrationDataTest.loginWithDBTest" />
+      <item itemvalue="TestNG.RegistrationDataTest.registerWithDBTest" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.MyAccountTest.updateAddressTest" />
+        <item itemvalue="TestNG.MyAccountTest.changePersonalInfoTest" />
         <item itemvalue="TestNG.RegistrationDataTest.registerWithDBTest" />
         <item itemvalue="TestNG.RegistrationDataTest.loginWithDBTest" />
         <item itemvalue="TestNG.RegistrationDataTest" />
-        <item itemvalue="TestNG.LoginDataTest" />
-        <item itemvalue="TestNG.LoginDataTest.loginWithJsonTest" />
       </list>
     </recent_temporary>
   </component>
@@ -215,7 +298,28 @@
       <option name="project" value="LOCAL" />
       <updated>1675094165751</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Final Project">
+      <created>1675098791146</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675098791146</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Final Project">
+      <created>1675173156451</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1675173156451</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Final Project">
+      <created>1675195497292</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1675195497292</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

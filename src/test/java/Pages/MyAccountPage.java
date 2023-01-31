@@ -9,12 +9,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 public class MyAccountPage extends BasePage{
 
 
-    private String myAccount = "#header_links > li:nth-child(5) > a"; //CSS
+    private String myAccount = "#header_links > li:nth-child(6)"; //CSS
 
     private String myAccountText = "#center_column > p"; //CSS
     private String myHistory = "#center_column > div.row.addresses-lists > div:nth-child(1) > ul > li:nth-child(1) > a"; //CSS
     private String myCredits = "#center_column > div.row.addresses-lists > div:nth-child(1) > ul > li:nth-child(2) > a"; //CSS
-    private String myAddresses = "#center_column > div.row.addresses-lists > div:nth-child(1) > ul > li:nth-child(3) > a"; //CSS
+    private String myAddresses = "#center_column > div.row.addresses-lists > div:nth-child(1) > ul > li:nth-child(3)"; //CSS
     private String personalInfo = "#center_column > div.row.addresses-lists > div:nth-child(1) > ul > li:nth-child(4)"; //CSS
     private String myVouchers = "#center_column > div.row.addresses-lists > div:nth-child(2) > ul > li:nth-child(1) > a"; //CSS
     private String myReviews = "#center_column > div.row.addresses-lists > div:nth-child(2) > ul > li:nth-child(2) > a";//CSS
@@ -23,11 +23,6 @@ public class MyAccountPage extends BasePage{
 
     public MyAccountPage(WebDriver driver) {
         super(driver);
-    }
-
-    public String getMyAccountText() {
-        WebElement myAccountCfrmText = SeleniumUtils.waitForGenericElement(driver, By.cssSelector(myAccountText), 5);
-        return myAccountCfrmText.getText();
     }
 
     public void goToMyAccount(){
@@ -60,5 +55,10 @@ public class MyAccountPage extends BasePage{
 
     public void goToLoyaltyPoints() {
         driver.findElement(By.cssSelector(loyaltyPoints)).click();
+    }
+
+    public String getMyAccountText() {
+        WebElement myAccountCfrmText = SeleniumUtils.waitForGenericElement(driver, By.cssSelector(myAccountText), 5);
+        return myAccountCfrmText.getText();
     }
 }

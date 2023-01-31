@@ -23,14 +23,16 @@ public class RegistrationPage extends BasePage {
     private String firstNameErrorInfo = "//*[@id=\"center_column\"]/div[2]/ol/li[3]";//XPath
 
     private String lastNameInfo = "customer_lastname"; //ID
-    private String lastNameErrorInfo = "//*[@id=\"center_column\"]/div[2]/ol/li[2]";
+    private String lastNameErrorInfo = "//*[@id=\"center_column\"]/div[2]/ol/li[2]"; //XPath
 
     private String emailInfo = "email"; //ID
-    private String emailInfoError = "//*[@id=\"center_column\"]/div[2]/ol/li[4]";
+    private String emailInfoError = "//*[@id=\"center_column\"]/div[2]/ol/li[4]"; //XPath
+
     private String passwordInfo = "passwd"; //ID
-    private String passwordError = "//*[@id=\"center_column\"]/div[2]/ol/li[5]";
+    private String passwordError = "//*[@id=\"center_column\"]/div[2]/ol/li[5]"; //XPath
+
     private String checkBoxNewsletter = "newsletter"; //ID
-    private String checkBoxNewsletterText = "#account-creation_form > div:nth-child(1) > div.checkbox > label"; //CSS
+
 
     //address
     private String lastNameAddress = "lastname"; //ID
@@ -49,7 +51,7 @@ public class RegistrationPage extends BasePage {
     private String phoneNoError = "//*[@id=\"center_column\"]/div[2]/ol/li[1]";
     private String aliasInfo = "alias"; //ID
     private String aliasInfoError = "//*[@id=\"center_column\"]/div[2]/ol/li[6]";
-    private String errors = "#center_column > div.alert.alert-danger > ol"; //CSS
+
     private String submitBtn = "submitAccount"; //ID
 
 
