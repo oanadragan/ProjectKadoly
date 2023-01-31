@@ -7,12 +7,16 @@
     <name>Archetype - ProjectKadoly</name>
     <url>http://maven.apache.org</url>
     <properties>
-        <xmlSuite>myFirstSuiteRun.xml</xmlSuite>
+        <xmlSuite>mySuiteTestSmoke.xml</xmlSuite>
         <webdriverManagerVersion>5.3.1</webdriverManagerVersion>
         <seleniumVersion>3.141.59</seleniumVersion>
         <lombokVersion>1.18.24</lombokVersion>
         <junitVersion>4.13.2</junitVersion>
         <testNgVersion>7.5</testNgVersion>
+        <extentVersion>5.0.9</extentVersion>
+        <aspectjVersion>1.9.19</aspectjVersion>
+        <allureVersion>2.20.1</allureVersion>
+        <restAssuredVersion>5.3.0</restAssuredVersion>
     </properties>
 
     <dependencies>
@@ -36,16 +40,6 @@
             <artifactId>testng</artifactId>
             <version>${testNgVersion}</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>2.0.6</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>2.0.6</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
@@ -101,7 +95,7 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.22</version>
         </dependency>
-        <!--        Excell reader -->
+        <!--        xcell reader -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
@@ -124,6 +118,37 @@
             <artifactId>commons-codec</artifactId>
             <version>1.15</version>
         </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.11.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>${extentVersion}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectjVersion}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>${allureVersion}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${restAssuredVersion}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -143,6 +168,10 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>${xmlSuite}</suiteXmlFile>
                     </suiteXmlFiles>
+                    <argLine>
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectjVersion}/aspectjweaver-${aspectjVersion}.jar"
+                    </argLine>
+
                 </configuration>
             </plugin>
         </plugins>
