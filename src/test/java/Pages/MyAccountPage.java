@@ -15,7 +15,7 @@ public class MyAccountPage extends BasePage{
     private String myHistory = "#center_column > div.row.addresses-lists > div:nth-child(1) > ul > li:nth-child(1) > a"; //CSS
     private String myCredits = "#center_column > div.row.addresses-lists > div:nth-child(1) > ul > li:nth-child(2) > a"; //CSS
     private String myAddresses = "#center_column > div.row.addresses-lists > div:nth-child(1) > ul > li:nth-child(3) > a"; //CSS
-    private String personalInfo = "#center_column > div.row.addresses-lists > div:nth-child(2) > ul > li:nth-child(1) > a"; //CSS
+    private String personalInfo = "#center_column > div.row.addresses-lists > div:nth-child(1) > ul > li:nth-child(4)"; //CSS
     private String myVouchers = "#center_column > div.row.addresses-lists > div:nth-child(2) > ul > li:nth-child(1) > a"; //CSS
     private String myReviews = "#center_column > div.row.addresses-lists > div:nth-child(2) > ul > li:nth-child(2) > a";//CSS
     private String loyaltyPoints = "#center_column > div.row.addresses-lists > div:nth-child(2) > ul > li.loyalty > a"; //CSS

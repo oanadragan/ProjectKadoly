@@ -4,8 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class HistoryPage extends BasePage{
-
-
     private String mainText = "#center_column > h1"; //CSS
     private String detailsText = "#center_column > p"; // CSS
     private String historyText = "#block-history"; // CSS

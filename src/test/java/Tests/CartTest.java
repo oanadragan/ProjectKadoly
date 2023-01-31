@@ -1,15 +1,22 @@
 package Tests;
 
-import Pages.AddToCartPage;
-import Pages.CheckCartPage;
-import Pages.SelectPage;
+import Pages.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class CartTest extends BaseTest{
-    @Test(groups = {"Regression"})
-    public void AddToCartTest() {
-        driver.get(baseUrl);
+
+    @Test (groups = {"Regression"})
+    public void loginTest() {
+        driver.get(baseUrl + "/autentificare");
+        LoginPage lp = new LoginPage(driver);
+        lp.login("test2@gmail.com", "12345678");
+
+    }
+
+    @Test(groups = {"Regression"}, dependsOnMethods = "loginTest")
+    public void addToCartTest() {
+    //    driver.get(baseUrl);
         SelectPage select = new SelectPage(driver);
         select.hoverButtonInteract();
         AddToCartPage add = new AddToCartPage(driver);
@@ -23,7 +30,7 @@ public class CartTest extends BaseTest{
 //        Assert.assertEquals(chk.getCartCount(), "1");
     }
 
-    @Test(groups = {"Regression"}, dependsOnMethods = "AddToCartTest")
+    @Test(groups = {"Regression"}, dependsOnMethods = "addToCartTest")
     public void checkCart(){
         CheckCartPage chk = new CheckCartPage(driver);
         chk.closeConfirmWin();
@@ -36,7 +43,7 @@ public class CartTest extends BaseTest{
     }
 
 
-    @Test(groups = {"Regression"}, dependsOnMethods = "AddToCartTest")
+    @Test(groups = {"Regression"}, dependsOnMethods = "addToCartTest")
     public void deleteCart(){
 //        driver.get(baseUrl);
 //        SelectPage select = new SelectPage(driver);
