@@ -128,6 +128,7 @@ public class RegistrationDataTest extends BaseTest {
         System.out.println("Expected Password Err:" + expectedAliasError);
         Assert.assertTrue(rp.checkError(expectedAliasError, "aliasError"));
 
+
     }
 
 }

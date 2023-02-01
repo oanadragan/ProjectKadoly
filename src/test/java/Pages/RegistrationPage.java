@@ -52,6 +52,8 @@ public class RegistrationPage extends BasePage {
     private String aliasInfo = "alias"; //ID
     private String aliasInfoError = "//*[@id=\"center_column\"]/div[2]/ol/li[6]";
 
+    private String errors = "#center_column > div.alert.alert-danger > ol"; //CSS
+
     private String submitBtn = "submitAccount"; //ID
 
 
@@ -235,6 +237,9 @@ public class RegistrationPage extends BasePage {
             wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(aliasInfoError)));
             return driver.findElement(By.xpath(aliasInfoError)).getText();
         }
-
+    public String getErrors () {
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(errors)));
+        return driver.findElement(By.cssSelector(errors)).getText();
+    }
 
 }

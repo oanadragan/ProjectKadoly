@@ -4,6 +4,7 @@ import Pages.LoginModel;
 import Pages.LoginPage;
 import Pages.LogoutPage;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -57,8 +58,10 @@ public class LoginDataTest extends BaseTest{
 
     @Test(dependsOnMethods = {"loginWithJsonTest"})
     public void logoutTest() {
-        LogoutPage lp1 = new LogoutPage(driver);
-        lp1.logout();
+        LogoutPage logoutP = new LogoutPage(driver);
+        logoutP.logout();
+        Assert.assertEquals(logoutP.getLogoutBtnTextSelector(), "LOGIN / CREAZĂ CONT");
+
 
     }
 }

@@ -2,6 +2,7 @@ package Pages;
 
 import Utils.SeleniumUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -26,7 +27,8 @@ public class MyAddressPage extends BasePage {
     public void updateAddress(String city, String address, String postalCode, String phoneNo){
 
         WebElement editAddressBtn = driver.findElement(By.xpath(editAddressBtnSelector));
-        editAddressBtn.click();
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", editAddressBtn);
 
         WebElement cityInput = driver.findElement(By.id(citySelector));
         cityInput.clear();
