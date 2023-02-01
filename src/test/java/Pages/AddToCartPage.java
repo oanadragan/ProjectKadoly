@@ -39,9 +39,9 @@ public class AddToCartPage extends BasePage {
 
     }
     public String productLabel() {
-        WebDriverWait wait = new WebDriverWait(driver, 15);
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(productDescription)));
-        return driver.findElement(By.cssSelector(productDescription)).getText();
+        WebElement productDescriptionText = SeleniumUtils.waitForGenericElement(driver,
+                By.cssSelector(productDescription), 5);
+        return productDescriptionText.getText();
 
     }
     public void addToCart() {
@@ -52,9 +52,9 @@ public class AddToCartPage extends BasePage {
     }
 
     public String confirmText(){
-        WebDriverWait wait = new WebDriverWait(driver, 15);
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#layer_cart")));
-        return driver.findElement(By.cssSelector("#layer_cart")).getText();
+        WebElement productDescriptionText = SeleniumUtils.waitForGenericElement(driver,
+                By.cssSelector("#layer_cart"), 5);
+        return productDescriptionText.getText();
     }
 
 //    public String confirmCart(){
