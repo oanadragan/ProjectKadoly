@@ -11,23 +11,28 @@ public class CartTest extends BaseTest{
         driver.get(baseUrl + "/autentificare");
         LoginPage lp = new LoginPage(driver);
         lp.login("test2@gmail.com", "12345678");
-
     }
 
-    @Test(groups = {"Regression"}, dependsOnMethods = "loginTest")
+    @Test(groups = {"Regression"})
     public void addToCartTest() {
-    //    driver.get(baseUrl);
+        driver.get("https://www.kadoly.ro/");
         SelectPage select = new SelectPage(driver);
         select.hoverButtonInteract();
         AddToCartPage add = new AddToCartPage(driver);
         add.sortProducts("Pret: Cel mai mic primul");
         add.selectProduct();
-        Assert.assertEquals(add.productLabel(), "PIX PERSONALIZAT IN CUTIE CILINDRICA");
+       Assert.assertEquals(add.productLabel(), "PIX PERSONALIZAT IN CUTIE CILINDRICA");
         add.addToCart();
+        try{
+            Thread.sleep(10000);
+        }
+        catch(InterruptedException ie){
+        }
+
         Assert.assertTrue(add.confirmText().contains("PRODUS ADĂUGAT CU SUCCES LA COŞUL DVS."));
-//        CheckCartPage chk = new CheckCartPage(driver);
-//        chk.closeConfirmWin();
-//        Assert.assertEquals(chk.getCartCount(), "1");
+        CheckCartPage chk = new CheckCartPage(driver);
+        chk.closeConfirmWin();
+        Assert.assertEquals(chk.getCartCount(), "1");
     }
 
     @Test(groups = {"Regression"}, dependsOnMethods = "addToCartTest")
@@ -44,21 +49,8 @@ public class CartTest extends BaseTest{
 
 
     @Test(groups = {"Regression"}, dependsOnMethods = "addToCartTest")
-    public void deleteCart(){
-//        driver.get(baseUrl);
-//        SelectPage select = new SelectPage(driver);
-//        select.hoverButtonInteract();
-//        AddToCartPage add = new AddToCartPage(driver);
-//        add.sortProducts("Pret: Cel mai mic primul");
-//        add.selectProduct();
-//        add.addToCart();
+    public void deleteCart(){;
         CheckCartPage chk = new CheckCartPage(driver);
-//        chk.closeConfirmWin();
-//        chk.goToCheckOut();
-//        Assert.assertEquals(chk.getQuantitySelector(), "1");
-//        Assert.assertEquals(chk.getTotalPriceSelector(), "29,00");
-//        Assert.assertEquals(chk.getTransportPriceSelector(), "20");
-//        Assert.assertEquals(chk.getFinalPriceSelector(), "49,00");
         chk.deleteProducts();
         try{
             Thread.sleep(10000);

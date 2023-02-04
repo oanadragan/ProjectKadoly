@@ -61,7 +61,5 @@ public class LoginDataTest extends BaseTest{
         LogoutPage logoutP = new LogoutPage(driver);
         logoutP.logout();
         Assert.assertEquals(logoutP.getLogoutBtnTextSelector(), "LOGIN / CREAZĂ CONT");
-
-
     }
 }

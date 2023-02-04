@@ -1,12 +1,15 @@
 package Tests;
 
 import Pages.*;
+import Utils.ExtentTestManager;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.lang.reflect.Method;
+
 public class MyAccountTest extends BaseTest{
 
-    @Test
+    @Test(groups = {"Smoke"})
     public void generalHomePage(){
         driver.get(baseUrl);
         HomePage hp = new HomePage(driver);
@@ -48,7 +51,7 @@ public class MyAccountTest extends BaseTest{
         Assert.assertEquals(acEditPage.getConfirmationTextSelector(), "Informatile personale au fost actualizate.");
     }
 
-    @Test
+    @Test(groups = {"Smoke"})
     public void updateAddressTest(){
         driver.get(baseUrl + "/autentificare");
         LoginPage lp = new LoginPage(driver);

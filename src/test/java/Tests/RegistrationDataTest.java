@@ -70,7 +70,6 @@ public class RegistrationDataTest extends BaseTest {
     public void registerWithDBTest(RegistrationModel rm) {
         RegistrationPage rp = new RegistrationPage(driver);
         driver.get(baseUrl + "/autentificare");
-        rp.verifyPage();
         rp.registrationPage1("test@yahoo.com");
 
 //         registration

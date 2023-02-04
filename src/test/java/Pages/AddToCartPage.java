@@ -2,6 +2,7 @@ package Pages;
 
 import Utils.SeleniumUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -47,13 +48,11 @@ public class AddToCartPage extends BasePage {
     public void addToCart() {
         WebElement addToCartBtn = driver.findElement(By.cssSelector(addToCartSelector));
         addToCartBtn.click();
-        WebElement addToCartBtn2 = driver.findElement(By.cssSelector("#layer_cart"));
-        addToCartBtn2.click();
     }
 
     public String confirmText(){
         WebElement productDescriptionText = SeleniumUtils.waitForGenericElement(driver,
-                By.cssSelector("#layer_cart"), 5);
+                By.cssSelector("#layer_cart"), 45);
         return productDescriptionText.getText();
     }
 

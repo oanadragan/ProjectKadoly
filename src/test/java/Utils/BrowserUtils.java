@@ -23,44 +23,13 @@ public class BrowserUtils {
             case ("chrome") : {
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
-                // Use this for accepting self-signed or other insecure certificates in the test env
-                options.setAcceptInsecureCerts(GenericUtils.getInsecureCertOptions(configFile));
-
-                // Start browser in headless mode (without a visible UI) with the app in the background
-               // options.setHeadless(true);
-
-                options.setHeadless(GenericUtils.getHeadlessMode(configFile));
-
-                // Setting a proxy server
-                if(GenericUtils.isProxyEnabled(configFile)) {
-                    Proxy proxy = new Proxy();
-                    proxy.setHttpProxy(
-                            ConfigUtils.getGenericValue(configFile,"proxyAddress", "127.0.0.1") + ":" +
-                                    ConfigUtils.getGenericValue(configFile, "proxyPort", "8081"));
-                    options.setProxy(proxy);
-
-                }
-
-                // Setting a fixed download directory
-                if(GenericUtils.isDownloadDirectoryEnabled(configFile)) {
-                    Map<String, Object> preferences = new HashMap<>();
-                    preferences.put("download.default_directory", ConstantUtils.DOWNLOAD_DIRECTORY);
-                    options.setExperimentalOption("prefs", preferences);
-                }
-
                 if(GenericUtils.startMaximized(configFile)) {
                     // Start the browser maximized
                     options.addArguments("--start-maximized");
                 }
-
-                if (GenericUtils.enableExtension(configFile)) {
-                    // Add an extension
-                    options.addExtensions(new File(ConstantUtils.EXTENSION_FOLDER + "\\" +
-                            ConfigUtils.getGenericValue(configFile, "extensionName", "extension_10_22_2_0.crx")));
-                }
-
                 return new ChromeDriver(options);
             }
+
             case ("firefox") : {
                 WebDriverManager.firefoxdriver().setup();
                 FirefoxOptions options = new FirefoxOptions();
@@ -69,28 +38,15 @@ public class BrowserUtils {
                     options.addArguments("--start-maximized");
                 }
 
-                if(GenericUtils.isDownloadDirectoryEnabled(configFile)) {
-                    profile.setPreference("browser.download.dir", ConstantUtils.DOWNLOAD_DIRECTORY);
-                }
-
-                if(GenericUtils.enableExtension(configFile)) {
-                    profile.addExtension(new File(ConstantUtils.EXTENSION_FOLDER + "\\" +
-                            ConfigUtils.getGenericValue(configFile, "extensionName", "ether_metamask-10.22.2.xpi")
-                    ));
-                }
-
-                options.setHeadless(GenericUtils.getHeadlessMode(configFile));
-                options.setAcceptInsecureCerts(GenericUtils.getInsecureCertOptions(configFile));
-
                 options.setProfile(profile);
                 WebDriver driver = new FirefoxDriver(options);
 
                 if(GenericUtils.startMaximized(configFile)) {
                     driver.manage().window().maximize();
                 }
-                driver.manage().timeouts().implicitlyWait(Long.parseLong(ConfigUtils.getGenericValue(configFile, "implicitTimeout", "10")), TimeUnit.SECONDS);
                 return driver;
             }
+
             case ("edge") : {
                 WebDriverManager.edgedriver().setup();
                 return new EdgeDriver();
@@ -101,6 +57,7 @@ public class BrowserUtils {
             }
         }
     }
+
 
     public static Browser getBrowser(BrowserTypes browserType) {
         switch(browserType.toString()) {

@@ -9,13 +9,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class RegistrationPage extends BasePage {
-    //1st Page
 
+    //1st Page
     WebDriverWait wait = new WebDriverWait(driver, 5);
     private String authenticationText = "//*[@id=\"center_column\"]/h1"; //XPath
     private String createAccountText = "//*[@id=\"create-account_form\"]/div/p"; //XPath
     private String createEmail = "email_create"; //I
     private String createEmailBtn = "SubmitCreate"; //ID
+    private String emailErrorRegPage1 = "#create_account_error > ol > li"; //CSS
 
     //2nd Page - personal information
 
@@ -193,7 +194,14 @@ public class RegistrationPage extends BasePage {
         return false;
     }
 
-        public String getLastNameErrorInfo () {
+
+
+    public String getEmailErrorRegPage1() {
+        return driver.findElement(By.cssSelector(emailErrorRegPage1)).getText();
+    }
+
+
+    public String getLastNameErrorInfo () {
             wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(lastNameErrorInfo)));
             return driver.findElement(By.xpath(lastNameErrorInfo)).getText();
         }
