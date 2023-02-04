@@ -2,17 +2,17 @@ package Tests;
 
 import Utils.BrowserUtils;
 import Utils.ConstantUtils;
+import Utils.ExtentTestManager;
 import Utils.GenericUtils;
+import com.aventstack.extentreports.ExtentTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.codec.binary.Base64;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
+import org.testng.ITestResult;
+import org.testng.annotations.*;
 
 public class BaseTest {
 
@@ -22,6 +22,7 @@ public class BaseTest {
     String browser;
     String baseUrl = GenericUtils.createBaseUrl(usedConfig);
     Base64 base64 = new Base64();
+    ExtentTest test;
 
     @BeforeTest (alwaysRun = true)
     public void beforeTest() {
@@ -41,9 +42,15 @@ public class BaseTest {
 //            setupDriver();
 //    }
 
+    @AfterMethod
+    public void getResult(ITestResult result) {
+        test = ExtentTestManager.updateTest(test, driver, result);
+    }
+
     @AfterTest
     public void afterTest() {
         driver.quit();
+        ExtentTestManager.extent.flush();
     }
 
 //    @AfterClass

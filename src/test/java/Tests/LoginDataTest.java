@@ -3,17 +3,23 @@ package Tests;
 import Pages.LoginModel;
 import Pages.LoginPage;
 import Pages.LogoutPage;
+import Utils.AllureTestListener;
+import Utils.ExtentTestManager;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.qameta.allure.*;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
+@Listeners ( {AllureTestListener.class})
 
 public class LoginDataTest extends BaseTest{
 
@@ -33,7 +39,8 @@ public class LoginDataTest extends BaseTest{
     }
 
     @Test(dataProvider = "jsonDp")
-    public void loginWithJsonTest(LoginModel lm) {
+    public void loginWithJsonTest(LoginModel lm, Method method) {
+        test = ExtentTestManager.startTest(method.getName(), "");
         System.out.println(lm);
         LoginPage loginPage = new LoginPage(driver);
 
@@ -57,7 +64,8 @@ public class LoginDataTest extends BaseTest{
     }
 
     @Test(dependsOnMethods = {"loginWithJsonTest"})
-    public void logoutTest() {
+    public void logoutTest(Method method) {
+        test = ExtentTestManager.startTest(method.getName(), "");
         LogoutPage logoutP = new LogoutPage(driver);
         logoutP.logout();
         Assert.assertEquals(logoutP.getLogoutBtnTextSelector(), "LOGIN / CREAZĂ CONT");

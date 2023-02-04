@@ -14,7 +14,7 @@ public class HomePage extends BasePage{
     private String searchResults = "//*[@id=\"center_column\"]/h1/span[1]"; //XPath
 
     public void verifyPage() {
-        Assert.assertEquals(driver.findElement(By.cssSelector(contactNo)).getText(), "AI NEVOIE DE AJUTOR? 0722 514 132 [L-V 09-17:00]");
+        Assert.assertEquals(driver.findElement(By.cssSelector(contactNo)).getText(), "AI NEVOIE DE AJUTOR? 0743 661 271 [L-V 09-17:00]");
         Assert.assertEquals(driver.findElement(By.cssSelector(homePageText)).getText(), "CADOURI PERSONALIZATE ȘI HANDMADE\n" +
                 "La Kadoly, fiecare cadou are propria sa poveste; te invităm, cu drag, să o descoperi...\n" +
                 "Adaugă personalitate și originalitate cadoului tău.");

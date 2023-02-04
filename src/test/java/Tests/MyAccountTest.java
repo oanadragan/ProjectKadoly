@@ -51,11 +51,11 @@ public class MyAccountTest extends BaseTest{
         Assert.assertEquals(acEditPage.getConfirmationTextSelector(), "Informatile personale au fost actualizate.");
     }
 
-    @Test(groups = {"Smoke"})
+    @Test(groups = {"Smoke"}, dependsOnMethods = "myHomePage")
     public void updateAddressTest(){
-        driver.get(baseUrl + "/autentificare");
-        LoginPage lp = new LoginPage(driver);
-        lp.login("test2@gmail.com", "12345678");
+//        driver.get(baseUrl + "/autentificare");
+//        LoginPage lp = new LoginPage(driver);
+//        lp.login("test2@gmail.com", "12345678");
         MyAccountPage myPage = new MyAccountPage(driver);
         myPage.goToMyAccount();
         myPage.gotToMyAddress();

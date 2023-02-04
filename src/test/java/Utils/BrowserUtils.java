@@ -58,35 +58,4 @@ public class BrowserUtils {
         }
     }
 
-
-    public static Browser getBrowser(BrowserTypes browserType) {
-        switch(browserType.toString()) {
-            case ("CHROME") : {
-                return new ChromeBrowser();
-            }
-            case("FIREFOX") : {
-                return new FirefoxBrowser();
-            }
-            case("EDGE") : {
-                return new EdgeBrowser();
-            }
-            default : {
-                System.out.println("Browser not supported");
-                return null;
-            }
-        }
-    }
-
-    public static String getBrowserExternal(String propName) {
-        // Take all the system environment names and values
-        Map<String, String> env = System.getenv();
-        // Check if the property is set
-        if (env.containsKey(propName)) {
-            System.out.println("Running from ENV variable with browser: " + System.getenv(propName));
-            return System.getenv(propName).toLowerCase();
-        }
-        else {
-            return "CHROME";
-        }
-    }
 }

@@ -39,14 +39,6 @@ public class GenericUtils {
         return ConfigUtils.getGenericValue(configFile, "browser", "FIREFOX");
     }
 
-    public static Boolean getInsecureCertOptions(String configFile) {
-        return Boolean.parseBoolean(ConfigUtils.getGenericValue(configFile, "acceptInsecureCerts", "false"));
-    }
-
-    public static Boolean getHeadlessMode(String configFile) {
-        return Boolean.parseBoolean(ConfigUtils.getGenericValue(configFile, "headlessMode", "false"));
-
-    }
     public static String getDBHostname(String configFile){
         return ConfigUtils.getGenericValue(configFile, "dbHostname", "");
     }
@@ -67,21 +59,8 @@ public class GenericUtils {
         return ConfigUtils.getGenericValue(configFile, "dbSchema", "");
     }
 
-    public static boolean isProxyEnabled(String configFile) {
-        return Boolean.parseBoolean(ConfigUtils.getGenericValue(configFile, "proxyEnabled", "false"));
-    }
-
-    public static boolean isDownloadDirectoryEnabled(String configFile) {
-        return Boolean.parseBoolean(ConfigUtils.getGenericValue(configFile, "downloadDirectoryEnabled", "false"));
-    }
-
     public static boolean startMaximized(String configFile) {
         return Boolean.parseBoolean(ConfigUtils.getGenericValue(configFile, "startMaximized", "false"));
-
-    }
-
-    public static boolean enableExtension(String configFile) {
-        return Boolean.parseBoolean(ConfigUtils.getGenericValue(configFile, "enableExtension", "false"));
 
     }
 

@@ -2,13 +2,17 @@ package Tests;
 
 import Pages.RegistrationModel;
 import Pages.RegistrationPage;
+import Utils.ExtentTestManager;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.lang.reflect.Method;
 
 public class EmailRegistrationTest extends BaseTest {
 
 @Test
-    public void emailRegistration1() {
+    public void emailRegistration1(Method method) {
+    test = ExtentTestManager.startTest(method.getName(), "");
         RegistrationPage rp = new RegistrationPage(driver);
         driver.get(baseUrl + "/autentificare");
         rp.verifyPage();

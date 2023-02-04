@@ -1,8 +1,11 @@
 package Tests;
 
 import Pages.*;
+import Utils.ExtentTestManager;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.lang.reflect.Method;
 
 public class CartTest extends BaseTest{
 
@@ -14,7 +17,8 @@ public class CartTest extends BaseTest{
     }
 
     @Test(groups = {"Regression"})
-    public void addToCartTest() {
+    public void addToCartTest(Method method) {
+        test = ExtentTestManager.startTest(method.getName(), "");
         driver.get("https://www.kadoly.ro/");
         SelectPage select = new SelectPage(driver);
         select.hoverButtonInteract();

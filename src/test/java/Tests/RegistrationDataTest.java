@@ -2,11 +2,13 @@ package Tests;
 
 import Pages.RegistrationModel;
 import Pages.RegistrationPage;
+import Utils.ExtentTestManager;
 import Utils.Tools;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import java.lang.reflect.Method;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -67,7 +69,8 @@ public class RegistrationDataTest extends BaseTest {
     }
 
     @Test(dataProvider = "SQLdp" , groups = {"Smoke"})
-    public void registerWithDBTest(RegistrationModel rm) {
+    public void registerWithDBTest(RegistrationModel rm, Method method) {
+        test = ExtentTestManager.startTest(method.getName(), "");
         RegistrationPage rp = new RegistrationPage(driver);
         driver.get(baseUrl + "/autentificare");
         rp.registrationPage1("test@yahoo.com");

@@ -24,28 +24,6 @@ public class SeleniumUtils {
         return wait.until(ExpectedConditions.textMatches(locator,patt));
     }
 
-    public static void printCookies(WebDriver driver) {
-        Set<Cookie> cookies = driver.manage().getCookies();
-        System.out.println("Number of cookies found: " + cookies.size());
-        for (Cookie c : cookies) {
-            System.out.println("Cookie name: " + c.getName());
-            System.out.println("--> Cookie value : " + c.getValue());
-            System.out.println("--> Cookie domain: " + c.getDomain());
-            System.out.println("--> Path: " + c.getPath());
-            System.out.println("--> Expiry: " + c.getExpiry());
-            System.out.println("-------------------------------");
-        }
-    }
-
-    public static boolean checkIfCookieExistsByName(WebDriver driver, String cookieName) {
-        Set<Cookie> cookies = driver.manage().getCookies();
-        for (Cookie c:cookies) {
-            if (c.getName().equalsIgnoreCase(cookieName)) {
-                return true;
-            }
-        }
-        return false;
-    }
 
     public static String takeScreenshot(WebDriver driver) {
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
