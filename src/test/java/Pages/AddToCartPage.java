@@ -40,13 +40,11 @@ public class AddToCartPage extends BasePage {
                 By.cssSelector(productSelector), 5);
         productEl.click();
 
-
     }
-    public String productLabel() {
+    public void productLabel() {
         WebElement productDescriptionText = SeleniumUtils.waitForGenericElement(driver,
                 By.cssSelector(productDescription), 5);
-        return productDescriptionText.getText();
-
+        Assert.assertEquals(productDescriptionText.getText(), "PIX PERSONALIZAT IN CUTIE CILINDRICA");
     }
     public void addToCart() {
         WebElement addToCartBtn = driver.findElement(By.cssSelector(addToCartSelector));

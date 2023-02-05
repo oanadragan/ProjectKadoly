@@ -26,7 +26,7 @@ public class CartTest extends BaseTest{
         AddToCartPage add = new AddToCartPage(driver);
         add.sortProducts("Pret: Cel mai mic primul");
         add.selectProduct();
-        Assert.assertEquals(add.productLabel(), "PIX PERSONALIZAT IN CUTIE CILINDRICA");
+        add.productLabel();
         add.addToCart();
         Assert.assertTrue(add.confirmText().contains("PRODUS ADĂUGAT CU SUCCES LA COŞUL DVS."));
         CheckCartPage chk = new CheckCartPage(driver);

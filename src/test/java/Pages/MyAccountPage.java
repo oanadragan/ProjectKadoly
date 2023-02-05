@@ -31,15 +31,12 @@ public class MyAccountPage extends BasePage{
 
     public void verifyMyAccountPage(){
         WebElement myAccountTextElmnt = SeleniumUtils.waitForGenericElement(driver, By.cssSelector(myAccountText), 5);
-        Assert.assertEquals(myAccountTextElmnt.getText(), "Bine ai venit in contul tau Kadoly. Aici iti poti administra datele personale si comenzile.");
+        Assert.assertEquals(myAccountTextElmnt.getText(),
+                "Bine ai venit in contul tau Kadoly. Aici iti poti administra datele personale si comenzile.");
     }
     public void goToMyHistory()
     {
         driver.findElement(By.cssSelector(myHistory)).click();
-    }
-
-    public void goToMyCredits(){
-        driver.findElement(By.cssSelector(myCredits)).click();
     }
 
     public void gotToMyAddress(){
@@ -48,6 +45,10 @@ public class MyAccountPage extends BasePage{
 
     public void goToPersonalInfo(){
         driver.findElement(By.cssSelector(personalInfo)).click();
+    }
+
+    public void goToMyCredits(){
+        driver.findElement(By.cssSelector(myCredits)).click();
     }
 
     public void goToMyVouchers() {
@@ -62,8 +63,4 @@ public class MyAccountPage extends BasePage{
         driver.findElement(By.cssSelector(loyaltyPoints)).click();
     }
 
-    public String getMyAccountText() {
-        WebElement myAccountCfrmText = SeleniumUtils.waitForGenericElement(driver, By.cssSelector(myAccountText), 5);
-        return myAccountCfrmText.getText();
-    }
 }
