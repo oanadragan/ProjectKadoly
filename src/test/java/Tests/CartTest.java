@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.lang.reflect.Method;
+import java.util.concurrent.TimeUnit;
 
 public class CartTest extends BaseTest{
 
@@ -25,14 +26,8 @@ public class CartTest extends BaseTest{
         AddToCartPage add = new AddToCartPage(driver);
         add.sortProducts("Pret: Cel mai mic primul");
         add.selectProduct();
-       Assert.assertEquals(add.productLabel(), "PIX PERSONALIZAT IN CUTIE CILINDRICA");
+        Assert.assertEquals(add.productLabel(), "PIX PERSONALIZAT IN CUTIE CILINDRICA");
         add.addToCart();
-        try{
-            Thread.sleep(10000);
-        }
-        catch(InterruptedException ie){
-        }
-
         Assert.assertTrue(add.confirmText().contains("PRODUS ADĂUGAT CU SUCCES LA COŞUL DVS."));
         CheckCartPage chk = new CheckCartPage(driver);
         chk.closeConfirmWin();

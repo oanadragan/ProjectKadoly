@@ -4,6 +4,7 @@ import Utils.SeleniumUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 public class MyAccountPage extends BasePage{
 
@@ -26,6 +27,11 @@ public class MyAccountPage extends BasePage{
 
     public void goToMyAccount(){
         driver.findElement(By.cssSelector(myAccount)).click();
+    }
+
+    public void verifyMyAccountPage(){
+        WebElement myAccountTextElmnt = SeleniumUtils.waitForGenericElement(driver, By.cssSelector(myAccountText), 5);
+        Assert.assertEquals(myAccountTextElmnt.getText(), "Bine ai venit in contul tau Kadoly. Aici iti poti administra datele personale si comenzile.");
     }
     public void goToMyHistory()
     {

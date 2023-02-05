@@ -10,6 +10,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.util.concurrent.TimeUnit;
+
 public class AddToCartPage extends BasePage {
 
     private String filterBtn = "#selectProductSort"; // CSS
@@ -35,7 +37,7 @@ public class AddToCartPage extends BasePage {
 
     public void selectProduct(){
         WebElement productEl = SeleniumUtils.waitForGenericElement(driver,
-                By.cssSelector(productSelector), 25);
+                By.cssSelector(productSelector), 5);
         productEl.click();
 
 
@@ -49,17 +51,11 @@ public class AddToCartPage extends BasePage {
     public void addToCart() {
         WebElement addToCartBtn = driver.findElement(By.cssSelector(addToCartSelector));
         addToCartBtn.click();
-//        WebElement addToCartBtn2 = SeleniumUtils.waitForGenericElement(driver,
-//                By.cssSelector("#layer_cart"), 5);
-//        JavascriptExecutor executor = (JavascriptExecutor)driver;
-//        executor.executeScript("arguments[0].click();", addToCartBtn2);
-       // addToCartBtn2.click();
     }
 
     public String confirmText(){
-        WebElement productDescriptionText = SeleniumUtils.waitForGenericElement(driver,
-                By.cssSelector("#layer_cart"), 45);
-        return productDescriptionText.getText();
+        SeleniumUtils.waitForTextOnSite(driver, By.cssSelector("#layer_cart"), 10, "PRODUS ADĂUGAT");
+        return driver.findElement(By.cssSelector("#layer_cart")).getText();
     }
 
 //    public String confirmCart(){

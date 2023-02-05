@@ -18,24 +18,24 @@ public class MyAccountTest extends BaseTest{
     }
 
     @Test(groups = {"Smoke"})
-    public void myHomePage() {
+    public void myHomePage(Method method) {
+        test = ExtentTestManager.startTest(method.getName(), "");
         driver.get(baseUrl + "/autentificare");
         LoginPage lp = new LoginPage(driver);
         lp.login("test2@gmail.com", "12345678");
         MyAccountPage myPage = new MyAccountPage(driver);
         myPage.goToMyAccount();
-        Assert.assertEquals(myPage.getMyAccountText(), "Bine ai venit in contul tau Kadoly. Aici iti poti administra datele personale si comenzile.");
+        myPage.verifyMyAccountPage();
     }
 
     @Test(groups = {"Smoke"}, dependsOnMethods = "myHomePage")
-    public void historyTest() {
+    public void historyTest(Method method) {
+        test = ExtentTestManager.startTest(method.getName(), "");
         MyAccountPage myPage = new MyAccountPage(driver);
         myPage.goToMyAccount();
         myPage.goToMyHistory();
         HistoryPage historyPage = new HistoryPage(driver);
-        Assert.assertEquals(historyPage.getMainText(), "ISTORIC COMENZI");
-        Assert.assertEquals(historyPage.getDetailsText(), "Comenzile pe care le-ai lansat de cand ti-ai creat un cont Kadoly.");
-        Assert.assertEquals(historyPage.getHistoryText(), "Nu ai lansat nicio comanda.");
+        historyPage.verifyHistoryPage();
         historyPage.clickGoBackBtn();
     }
 
@@ -47,7 +47,6 @@ public class MyAccountTest extends BaseTest{
         PersonalInfoEditPage acEditPage = new PersonalInfoEditPage(driver);
         acEditPage.verifyInfoPage();
         acEditPage.editAccountDetails("Oana", "Dragan", "test2@gmail.com", "12345678");
-
         Assert.assertEquals(acEditPage.getConfirmationTextSelector(), "Informatile personale au fost actualizate.");
     }
 

@@ -2,6 +2,7 @@ package Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 public class HistoryPage extends BasePage{
     private String mainText = "#center_column > h1"; //CSS
@@ -15,16 +16,11 @@ public class HistoryPage extends BasePage{
         super(driver);
     }
 
-    public String getMainText() {
-        return driver.findElement(By.cssSelector(mainText)).getText();
-    }
+    public void verifyHistoryPage(){
 
-    public String getDetailsText() {
-        return driver.findElement(By.cssSelector(detailsText)).getText();
-    }
-
-    public String getHistoryText() {
-        return driver.findElement(By.cssSelector(historyText)).getText();
+        Assert.assertEquals(driver.findElement(By.cssSelector(mainText)).getText(), "ISTORIC COMENZI");
+        Assert.assertEquals(driver.findElement(By.cssSelector(detailsText)).getText(), "Comenzile pe care le-ai lansat de cand ti-ai creat un cont Kadoly.");
+        Assert.assertEquals(driver.findElement(By.cssSelector(historyText)).getText(), "Nu ai lansat nicio comanda.");
     }
 
     public void clickGoBackBtn() {

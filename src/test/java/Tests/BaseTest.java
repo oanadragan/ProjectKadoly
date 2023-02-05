@@ -61,7 +61,6 @@ public class BaseTest {
 
 
     public void setupDriver(){
-        System.out.println(baseUrl);
         driver = BrowserUtils.getBrowser(browser, usedConfig);
         dbHostname = GenericUtils.getDBHostname(usedConfig);
         dbUser = GenericUtils.getDBUser(usedConfig);
