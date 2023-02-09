@@ -10,7 +10,8 @@ import java.lang.reflect.Method;
 public class MyAccountTest extends BaseTest{
 
     @Test(groups = {"Smoke"})
-    public void generalHomePage(){
+    public void generalHomePage(Method method) {
+        test = ExtentTestManager.startTest(method.getName(), "");
         driver.get(baseUrl);
         HomePage hp = new HomePage(driver);
         hp.verifyPage();
@@ -40,7 +41,8 @@ public class MyAccountTest extends BaseTest{
     }
 
     @Test (groups = {"Smoke"}, dependsOnMethods = "myHomePage")
-    public void changePersonalInfoTest(){
+    public void changePersonalInfoTest(Method method) {
+        test = ExtentTestManager.startTest(method.getName(), "");
         MyAccountPage myPage = new MyAccountPage(driver);
         myPage.goToMyAccount();
         myPage.goToPersonalInfo();
@@ -51,7 +53,8 @@ public class MyAccountTest extends BaseTest{
     }
 
     @Test(groups = {"Smoke"}, dependsOnMethods = "myHomePage")
-    public void updateAddressTest(){
+    public void updateAddressTest(Method method) {
+        test = ExtentTestManager.startTest(method.getName(), "");
 //        driver.get(baseUrl + "/autentificare");
 //        LoginPage lp = new LoginPage(driver);
 //        lp.login("test2@gmail.com", "12345678");
@@ -60,8 +63,8 @@ public class MyAccountTest extends BaseTest{
         myPage.gotToMyAddress();
         MyAddressPage ap = new MyAddressPage(driver);
         ap.verifyPage();
-        ap.updateAddress("Giroc", "Strada", "111111", "1234512345" );
-        Assert.assertEquals(ap.getMyAddressSelector(), "Giroc, Strada");
+        ap.updateAddress("Giroc", "Strada 1", "111111", "1234512345" );
+        Assert.assertEquals(ap.getMyAddressSelector(), "Giroc, Strada 1");
     }
 
 }

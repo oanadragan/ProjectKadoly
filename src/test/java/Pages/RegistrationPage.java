@@ -3,6 +3,7 @@ package Pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -107,9 +108,11 @@ public class RegistrationPage extends BasePage {
         passwordInput.clear();
         passwordInput.sendKeys(password1);
 
+
         boolean checked = checkboxInput.isSelected();
         if (!checked) {
-            checkboxInput.click();
+            Actions actions = new Actions(driver);
+            actions.click(checkboxInput).build().perform();
         }
 
         lastNameAddressInput.clear();
@@ -133,6 +136,7 @@ public class RegistrationPage extends BasePage {
 
         submitButton.click();
         }
+
 
     public boolean checkError(String expectedErr, String errorType) {
 

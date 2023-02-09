@@ -10,17 +10,18 @@ import java.util.concurrent.TimeUnit;
 
 public class CartTest extends BaseTest{
 
-    @Test (groups = {"Regression"})
-    public void loginTest() {
+    @Test (groups = {"Cart"})
+    public void loginTest(Method method) {
+        test = ExtentTestManager.startTest(method.getName(), "");
         driver.get(baseUrl + "/autentificare");
         LoginPage lp = new LoginPage(driver);
         lp.login("test2@gmail.com", "12345678");
     }
 
-    @Test(groups = {"Regression"})
+    @Test(groups = {"Cart"}, dependsOnMethods = "loginTest")
     public void addToCartTest(Method method) {
-        test = ExtentTestManager.startTest(method.getName(), "");
-        driver.get("https://www.kadoly.ro/");
+        test = ExtentTestManager.startTest(method.getName(), "add to cart");
+    //    driver.get("https://www.kadoly.ro/");
         SelectPage select = new SelectPage(driver);
         select.hoverButtonInteract();
         AddToCartPage add = new AddToCartPage(driver);
@@ -34,8 +35,9 @@ public class CartTest extends BaseTest{
         Assert.assertEquals(chk.getCartCount(), "1");
     }
 
-    @Test(groups = {"Regression"}, dependsOnMethods = "addToCartTest")
-    public void checkCart(){
+    @Test(groups = {"Cart"}, dependsOnMethods = "addToCartTest")
+    public void checkCart(Method method) {
+        test = ExtentTestManager.startTest(method.getName(), "check cart");
         CheckCartPage chk = new CheckCartPage(driver);
         chk.closeConfirmWin();
         Assert.assertEquals(chk.getCartCount(), "1");
@@ -47,8 +49,9 @@ public class CartTest extends BaseTest{
     }
 
 
-    @Test(groups = {"Regression"}, dependsOnMethods = "addToCartTest")
-    public void deleteCart(){;
+    @Test(groups = {"Cart"}, dependsOnMethods = "addToCartTest")
+    public void deleteCart(Method method) {
+        test = ExtentTestManager.startTest(method.getName(), "delete products from cart");
         CheckCartPage chk = new CheckCartPage(driver);
         chk.deleteProducts();
         try{
@@ -56,7 +59,6 @@ public class CartTest extends BaseTest{
         }
         catch(InterruptedException ie){
         }
-
         Assert.assertEquals(chk.getDeleteProductsText(), "Cosul tau este gol.");
     }
 }

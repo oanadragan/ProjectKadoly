@@ -52,7 +52,9 @@ public class CheckCartPage extends BasePage{
     }
 
     public String getDeleteProductsText() {
-        WebElement confirmDeletePrd = SeleniumUtils.waitForGenericElement(driver, By.cssSelector(deleteProductsText), 70);
+
+        WebElement confirmDeletePrd = SeleniumUtils.waitForGenericElement(driver, By.cssSelector(deleteProductsText),
+                70);
         return confirmDeletePrd.getText();
     }
 

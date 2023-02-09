@@ -14,10 +14,10 @@
             <class name="Tests.MyAccountTest"/>
         </classes>
     </test>
-    <test name="Regression Tests">
+    <test name="Cart Tests">
         <groups>
             <run>
-                <include name="Regression"/>
+                <include name="Cart"/>
             </run>
         </groups>
         <classes>

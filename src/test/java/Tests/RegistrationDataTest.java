@@ -68,7 +68,7 @@ public class RegistrationDataTest extends BaseTest {
         return Tools.replaceElements(resultSet.getString(element), "''", "");
     }
 
-    @Test(dataProvider = "SQLdp" , groups = {"Smoke"})
+    @Test(dataProvider = "SQLdp" , groups = {"NewAccount"})
     public void registerWithDBTest(RegistrationModel rm, Method method) {
         test = ExtentTestManager.startTest(method.getName(), "");
         RegistrationPage rp = new RegistrationPage(driver);
