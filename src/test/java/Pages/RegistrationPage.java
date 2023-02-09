@@ -11,16 +11,6 @@ import org.testng.Assert;
 
 public class RegistrationPage extends BasePage {
 
-    //1st Page
-    WebDriverWait wait = new WebDriverWait(driver, 5);
-    private String authenticationText = "//*[@id=\"center_column\"]/h1"; //XPath
-    private String createAccountText = "//*[@id=\"create-account_form\"]/div/p"; //XPath
-    private String createEmail = "email_create"; //I
-    private String createEmailBtn = "SubmitCreate"; //ID
-    private String emailErrorRegPage1 = "#create_account_error > ol > li"; //CSS
-
-    //2nd Page - personal information
-
     private String firstNameInfo = "customer_firstname"; //ID
     private String firstNameErrorInfo = "//*[@id=\"center_column\"]/div[2]/ol/li[3]";//XPath
 
@@ -63,20 +53,7 @@ public class RegistrationPage extends BasePage {
     public RegistrationPage(WebDriver driver) {
         super(driver);
     }
-    public void verifyPage() {
-        Assert.assertEquals(driver.findElement(By.xpath(authenticationText)).getText(), "AUTENTIFICARE");
-        Assert.assertEquals(driver.findElement(By.xpath(createAccountText)).getText(), "Te rugam sa introduci adresa de e-mail pentru a crea un cont.");
-    }
 
-    public void registrationPage1(String username) {
-        WebElement emailInput = driver.findElement(By.id(createEmail));
-        WebElement emailInputBtn = driver.findElement(By.id(createEmailBtn));
-
-        emailInput.clear();
-        emailInput.sendKeys(username);
-
-        emailInputBtn.submit();
-    }
 
     public void registration(String firstName1, String lastName1, String email1, String password1,
                                   String lastName2, String firstName2, String city1,
@@ -200,58 +177,8 @@ public class RegistrationPage extends BasePage {
 
 
 
-    public String getEmailErrorRegPage1() {
-        return driver.findElement(By.cssSelector(emailErrorRegPage1)).getText();
-    }
 
 
-    public String getLastNameErrorInfo () {
-            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(lastNameErrorInfo)));
-            return driver.findElement(By.xpath(lastNameErrorInfo)).getText();
-        }
 
-        public String getFirstNameErrorInfo () {
-            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(firstNameErrorInfo)));
-            return driver.findElement(By.xpath(firstNameErrorInfo)).getText();
-        }
-
-        public String getEmailInfoError () {
-            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(emailInfoError)));
-            return driver.findElement(By.xpath(emailInfoError)).getText();
-        }
-
-        public String getPasswordError () {
-            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(passwordError)));
-            return driver.findElement(By.xpath(passwordError)).getText();
-        }
-
-        public String getCityInfoError () {
-            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(cityInfoError)));
-            return driver.findElement(By.xpath(cityInfoError)).getText();
-        }
-
-        public String getAddressInfoError () {
-            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(addressInfoError)));
-            return driver.findElement(By.xpath(addressInfoError)).getText();
-        }
-
-        public String getPostalCodeInfoError () {
-            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(postalCodeInfoError)));
-            return driver.findElement(By.xpath(postalCodeInfoError)).getText();
-        }
-
-        public String getPhoneNoError () {
-            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(phoneNoError)));
-            return driver.findElement(By.xpath(phoneNoError)).getText();
-        }
-
-        public String getAliasInfoError () {
-            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(aliasInfoError)));
-            return driver.findElement(By.xpath(aliasInfoError)).getText();
-        }
-    public String getErrors () {
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(errors)));
-        return driver.findElement(By.cssSelector(errors)).getText();
-    }
 
 }

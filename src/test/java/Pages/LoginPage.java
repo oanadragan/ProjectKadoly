@@ -53,8 +53,5 @@ public class LoginPage extends BasePage{
         }
         return false;
     }
-    public String getErrorText() {
-        return driver.findElement(By.xpath(errorText)).getText();
-    }
 
 }

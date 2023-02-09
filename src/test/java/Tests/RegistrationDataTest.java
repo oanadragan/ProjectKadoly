@@ -1,5 +1,6 @@
 package Tests;
 
+import Pages.EmailRegistrationPage;
 import Pages.RegistrationModel;
 import Pages.RegistrationPage;
 import Utils.ExtentTestManager;
@@ -68,13 +69,14 @@ public class RegistrationDataTest extends BaseTest {
         return Tools.replaceElements(resultSet.getString(element), "''", "");
     }
 
-    @Test(dataProvider = "SQLdp" , groups = {"NewAccount"})
+    @Test(dataProvider = "SQLdp")
     public void registerWithDBTest(RegistrationModel rm, Method method) {
         test = ExtentTestManager.startTest(method.getName(), "");
-        RegistrationPage rp = new RegistrationPage(driver);
+        EmailRegistrationPage emailReg = new EmailRegistrationPage(driver);
         driver.get(baseUrl + "/autentificare");
-        rp.registrationPage1("test@yahoo.com");
+        emailReg.registrationPage1("test@yahoo.com");
 
+        RegistrationPage rp = new RegistrationPage(driver);
 //         registration
         rp.registration(rm.getRegistrationAccountModel().getFirstName1(), rm.getRegistrationAccountModel().getLastName1(),
         rm.getRegistrationAccountModel().getEmail1(), rm.getRegistrationAccountModel().getPassword1(),

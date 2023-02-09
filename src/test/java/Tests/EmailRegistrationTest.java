@@ -1,5 +1,6 @@
 package Tests;
 
+import Pages.EmailRegistrationPage;
 import Pages.RegistrationModel;
 import Pages.RegistrationPage;
 import Utils.ExtentTestManager;
@@ -10,14 +11,14 @@ import java.lang.reflect.Method;
 
 public class EmailRegistrationTest extends BaseTest {
 
-@Test
+    @Test
     public void emailRegistration1(Method method) {
-    test = ExtentTestManager.startTest(method.getName(), "");
-        RegistrationPage rp = new RegistrationPage(driver);
+        test = ExtentTestManager.startTest(method.getName(), "");
+        EmailRegistrationPage emailReg = new EmailRegistrationPage(driver);
         driver.get(baseUrl + "/autentificare");
-        rp.verifyPage();
-        rp.registrationPage1("test2@gmail.com");
-        Assert.assertEquals(rp.getEmailErrorRegPage1(), "Exista deja un cont cu aceeasi adresa de e-mail. Introdu parola sau cere una noua.");
+        emailReg.verifyPage();
+        emailReg.registrationPage1("test2@gmail.com");
+        Assert.assertEquals(emailReg.getEmailErrorRegPage1(), "Exista deja un cont cu aceeasi adresa de e-mail. Introdu parola sau cere una noua.");
 
     }
 }

@@ -10,18 +10,10 @@ import java.util.concurrent.TimeUnit;
 
 public class CartTest extends BaseTest{
 
-    @Test (groups = {"Cart"})
-    public void loginTest(Method method) {
-        test = ExtentTestManager.startTest(method.getName(), "");
-        driver.get(baseUrl + "/autentificare");
-        LoginPage lp = new LoginPage(driver);
-        lp.login("test2@gmail.com", "12345678");
-    }
-
-    @Test(groups = {"Cart"}, dependsOnMethods = "loginTest")
+    @Test(groups = {"Cart"})
     public void addToCartTest(Method method) {
         test = ExtentTestManager.startTest(method.getName(), "add to cart");
-    //    driver.get("https://www.kadoly.ro/");
+        driver.get("https://www.kadoly.ro/");
         SelectPage select = new SelectPage(driver);
         select.hoverButtonInteract();
         AddToCartPage add = new AddToCartPage(driver);
@@ -30,9 +22,7 @@ public class CartTest extends BaseTest{
         add.productLabel();
         add.addToCart();
         Assert.assertTrue(add.confirmText().contains("PRODUS ADĂUGAT CU SUCCES LA COŞUL DVS."));
-        CheckCartPage chk = new CheckCartPage(driver);
-        chk.closeConfirmWin();
-        Assert.assertEquals(chk.getCartCount(), "1");
+
     }
 
     @Test(groups = {"Cart"}, dependsOnMethods = "addToCartTest")

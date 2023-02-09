@@ -15,7 +15,6 @@ public class SelectPage extends BasePage{
 
     private String menSelector = "#fieldmegamenu-main > ul > li.root.root-17.categorii_cadouri > div > div"; // CSS
     private String menGifts = "#fieldmegamenu-main > ul > li.root.root-17.categorii_cadouri > ul > li.menu-item.menu-item-90.depth-1.category > div > a"; // CSS
-
     private String resultsMenGifts = "#center_column > h1 > span.cat-name"; // CSS
 
     public SelectPage(WebDriver driver) {
