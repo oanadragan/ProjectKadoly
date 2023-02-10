@@ -48,7 +48,7 @@ public class MyAccountTest extends BaseTest{
         myPage.goToPersonalInfo();
         PersonalInfoEditPage acEditPage = new PersonalInfoEditPage(driver);
         acEditPage.verifyInfoPage();
-        acEditPage.editAccountDetails("Oana", "Dragan", "test2@gmail.com", "12345678");
+        acEditPage.editAccountDetails("O", "D", "test2@gmail.com", "12345678");
         Assert.assertEquals(acEditPage.getConfirmationTextSelector(), "Informatile personale au fost actualizate.");
     }
 
