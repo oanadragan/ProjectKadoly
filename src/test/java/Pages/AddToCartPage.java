@@ -36,8 +36,8 @@ public class AddToCartPage extends BasePage {
     }
 
     public void selectProduct(){
-        WebElement productEl = SeleniumUtils.waitForGenericElement(driver,
-                By.cssSelector(productSelector), 5);
+
+        WebElement productEl = driver.findElement(By.cssSelector(productSelector));
         productEl.click();
 
     }
@@ -56,11 +56,6 @@ public class AddToCartPage extends BasePage {
         return driver.findElement(By.cssSelector("#layer_cart")).getText();
     }
 
-//    public String confirmCart(){
-//        WebDriverWait wait = new WebDriverWait(driver, 15);
-//        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(confirmCartSelector)));
-//        return driver.findElement(By.cssSelector(confirmCartSelector)).getText();
-//    }
 
 
 
