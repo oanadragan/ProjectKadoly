@@ -6,11 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="e50149de-8deb-4395-91c4-bf76dde0e4c5" name="Changes" comment="Final Project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extends-reports-results/extentReport_1675945378065.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extends-reports-results/extentReport_1675966200554.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extends-reports-results/extentReport_1675966345924.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extends-reports-results/extentReport_1675966971037.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/AccountModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/PageObjectModel/AccountModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Pages/AddToCartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/AddToCartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/LoginModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/PageObjectModel/LoginModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/RegistrationAccountModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/PageObjectModel/RegistrationAccountModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/RegistrationModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/PageObjectModel/RegistrationModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/EmailRegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/EmailRegistrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/LoginDataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/LoginDataTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/MyAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/MyAccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/RegistrationDataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/RegistrationDataTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Utils/ConstantUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utils/ConstantUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +27,7 @@
       <list>
         <option value="XML Properties File" />
         <option value="Class" />
+        <option value="package-info" />
       </list>
     </option>
   </component>
@@ -65,7 +71,7 @@
       <recent name="Utils" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.MyAccountTest.changePersonalInfoTest">
     <configuration name="CartTest.addToCartTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ProjectKadoly" />
       <extension name="coverage">
@@ -237,10 +243,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CartTest.addToCartTest" />
         <item itemvalue="TestNG.RegistrationDataTest.registerWithDBTest" />
         <item itemvalue="TestNG.EmailRegistrationTest.emailRegistration1" />
         <item itemvalue="TestNG.CartTest.deleteCart" />
-        <item itemvalue="TestNG.CartTest.addToCartTest" />
         <item itemvalue="TestNG.MyAccountTest.myHomePage" />
       </list>
     </recent_temporary>
@@ -387,7 +393,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676038679857</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Final Project">
+      <created>1676097064454</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1676097064454</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

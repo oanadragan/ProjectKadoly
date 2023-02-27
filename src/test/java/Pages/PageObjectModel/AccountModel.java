@@ -1,4 +1,4 @@
-package Pages;
+package Pages.PageObjectModel;
 
 import javax.xml.bind.annotation.XmlElement;
 

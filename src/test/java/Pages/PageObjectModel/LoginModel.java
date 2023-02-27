@@ -1,4 +1,6 @@
-package Pages;
+package Pages.PageObjectModel;
+
+import Pages.PageObjectModel.AccountModel;
 
 import javax.xml.bind.annotation.XmlElement;
 

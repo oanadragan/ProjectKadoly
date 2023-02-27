@@ -16,7 +16,7 @@ public class AddToCartPage extends BasePage {
 
     private String filterBtn = "#selectProductSort"; // CSS
     private String sortText = "#productsSortForm > div > label"; //CSS
-    private String productSelector = "#center_column > div.hide-color-options.hide-stock-info.hide-quickview > ul > li:nth-child(1)"; //CSS
+    private String productSelector = "//*[@id=\"center_column\"]/div[5]/ul/li[1]"; //CSS
     private String addToCartSelector = "#add_to_cart > button"; //CSS
     private String productDescription = "#center_column > div:nth-child(2) > div.primary_block.row > div.pb-center-column.col-xs-12.col-sm-7.col-md-7 > h1"; //CSS
     private String confirmSelector = "#layer_cart > div:nth-child(1)"; //CSS
@@ -36,8 +36,7 @@ public class AddToCartPage extends BasePage {
     }
 
     public void selectProduct(){
-
-        WebElement productEl = driver.findElement(By.cssSelector(productSelector));
+        WebElement productEl = driver.findElement(By.xpath(productSelector));
         productEl.click();
 
     }

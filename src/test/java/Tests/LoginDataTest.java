@@ -1,13 +1,12 @@
 package Tests;
 
-import Pages.LoginModel;
+import Pages.PageObjectModel.LoginModel;
 import Pages.LoginPage;
 import Pages.LogoutPage;
 import Utils.AllureTestListener;
+import Utils.ConstantUtils;
 import Utils.ExtentTestManager;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.qameta.allure.*;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
@@ -29,7 +28,7 @@ public class LoginDataTest extends BaseTest{
 //      here is starting deserialization of json into LoginModel object
         ObjectMapper objectMapper = new ObjectMapper();
 
-        File f = new File("src\\test\\resources\\data\\loginData.json");
+        File f = new File(ConstantUtils.LOGIN_FILE);
         LoginModel[] lms = objectMapper.readValue(f, LoginModel[].class);
 
         for (LoginModel lm : lms)

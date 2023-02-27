@@ -55,9 +55,6 @@ public class MyAccountTest extends BaseTest{
     @Test(groups = {"Smoke"}, dependsOnMethods = "myHomePage")
     public void updateAddressTest(Method method) {
         test = ExtentTestManager.startTest(method.getName(), "");
-//        driver.get(baseUrl + "/autentificare");
-//        LoginPage lp = new LoginPage(driver);
-//        lp.login("test2@gmail.com", "12345678");
         MyAccountPage myPage = new MyAccountPage(driver);
         myPage.goToMyAccount();
         myPage.gotToMyAddress();
