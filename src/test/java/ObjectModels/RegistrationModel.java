@@ -1,4 +1,4 @@
-package Pages.PageObjectModel;
+package ObjectModels;
 
 public class RegistrationModel {
 

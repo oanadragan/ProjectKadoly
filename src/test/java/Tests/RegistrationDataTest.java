@@ -1,7 +1,7 @@
 package Tests;
 
 import Pages.EmailRegistrationPage;
-import Pages.PageObjectModel.RegistrationModel;
+import ObjectModels.RegistrationModel;
 import Pages.RegistrationPage;
 import Utils.ExtentTestManager;
 import Utils.Tools;

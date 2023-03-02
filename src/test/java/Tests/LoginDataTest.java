@@ -1,6 +1,6 @@
 package Tests;
 
-import Pages.PageObjectModel.LoginModel;
+import ObjectModels.LoginModel;
 import Pages.LoginPage;
 import Pages.LogoutPage;
 import Utils.AllureTestListener;
