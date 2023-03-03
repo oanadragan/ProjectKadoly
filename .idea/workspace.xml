@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e50149de-8deb-4395-91c4-bf76dde0e4c5" name="Changes" comment="Final Project">
+      <change afterPath="$PROJECT_DIR$/src/test/Resources/Data/CartTestData.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/DataUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/ExcelReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ObjectModels/AccountModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ObjectModels/AccountModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ObjectModels/LoginModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ObjectModels/LoginModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/MyAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/MyAccountPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/CartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/CartTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/MyAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/MyAccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Utils/ConstantUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utils/ConstantUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Utils/Tools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utils/Tools.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +26,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="XML Properties File" />
-        <option value="Class" />
         <option value="package-info" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -65,7 +71,7 @@
       <recent name="Utils" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.MyAccountTest.changePersonalInfoTest">
+  <component name="RunManager">
     <configuration name="CartTest.addToCartTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ProjectKadoly" />
       <extension name="coverage">
@@ -77,6 +83,24 @@
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.CartTest" />
       <option name="METHOD_NAME" value="addToCartTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CartTest.checkCart" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ProjectKadoly" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.CartTest" />
+      <option name="METHOD_NAME" value="checkCart" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -148,24 +172,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyAccountTest.myHomePage" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ProjectKadoly" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.MyAccountTest" />
-      <option name="METHOD_NAME" value="myHomePage" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="NewSuite" type="TestNG">
       <shortenClasspath name="NONE" />
       <useClassPathOnly />
@@ -229,19 +235,19 @@
       <item itemvalue="TestNG.MyAccountTest.changePersonalInfoTest" />
       <item itemvalue="TestNG.Smoke" />
       <item itemvalue="TestNG.NewSuite" />
+      <item itemvalue="TestNG.CartTest.checkCart" />
       <item itemvalue="TestNG.CartTest.deleteCart" />
       <item itemvalue="TestNG.RegistrationDataTest.registerWithDBTest" />
       <item itemvalue="TestNG.CartTest.addToCartTest" />
       <item itemvalue="TestNG.EmailRegistrationTest.emailRegistration1" />
-      <item itemvalue="TestNG.MyAccountTest.myHomePage" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CartTest.checkCart" />
         <item itemvalue="TestNG.CartTest.addToCartTest" />
         <item itemvalue="TestNG.RegistrationDataTest.registerWithDBTest" />
         <item itemvalue="TestNG.EmailRegistrationTest.emailRegistration1" />
         <item itemvalue="TestNG.CartTest.deleteCart" />
-        <item itemvalue="TestNG.MyAccountTest.myHomePage" />
       </list>
     </recent_temporary>
   </component>
@@ -408,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677773418127</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Final Project">
+      <created>1677831108467</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1677831108467</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

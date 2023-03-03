@@ -42,10 +42,10 @@ public class BaseTest {
 //            setupDriver();
 //    }
 
-    @AfterMethod
-    public void getResult(ITestResult result) {
-        test = ExtentTestManager.updateTest(test, driver, result);
-    }
+//    @AfterMethod
+//    public void getResult(ITestResult result) {
+//        test = ExtentTestManager.updateTest(test, driver, result);
+//    }
 
     @AfterTest
     public void afterTest() {

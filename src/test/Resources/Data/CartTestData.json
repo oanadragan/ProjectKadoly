@@ -1,0 +1,19 @@
+{
+  "add to cart": [
+    {
+      "Filter Products": "Pret: Cel mai mic primul",
+      "Add to cart text": "PRODUS ADĂUGAT CU SUCCES LA COŞUL DVS."
+    }
+  ],
+
+  "check cart": [
+    {
+      "Cart Qty": "1",
+      "Total Price": "29,00 lei",
+      "Transport Price": "20,00 lei",
+      "Final Price": "49,00 lei",
+      "Delete Cart": "Cosul tau este gol."
+    }
+  ]
+}
+

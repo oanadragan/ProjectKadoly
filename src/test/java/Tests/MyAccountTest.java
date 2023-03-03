@@ -1,17 +1,15 @@
 package Tests;
 
 import Pages.*;
-import Utils.ExtentTestManager;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.lang.reflect.Method;
 
 public class MyAccountTest extends BaseTest{
 
     @Test(groups = {"Smoke"})
-    public void generalHomePage(Method method) {
-        test = ExtentTestManager.startTest(method.getName(), "");
+    public void generalHomePage() {
         driver.get(baseUrl);
         HomePage hp = new HomePage(driver);
         hp.verifyPage();
@@ -19,8 +17,7 @@ public class MyAccountTest extends BaseTest{
     }
 
     @Test(groups = {"Smoke"})
-    public void myHomePage(Method method) {
-        test = ExtentTestManager.startTest(method.getName(), "");
+    public void myHomePage() {
         driver.get(baseUrl + "/autentificare");
         LoginPage lp = new LoginPage(driver);
         lp.login("test2@gmail.com", "12345678");
@@ -30,8 +27,7 @@ public class MyAccountTest extends BaseTest{
     }
 
     @Test(groups = {"Smoke"}, dependsOnMethods = "myHomePage")
-    public void historyTest(Method method) {
-        test = ExtentTestManager.startTest(method.getName(), "");
+    public void historyTest() {
         MyAccountPage myPage = new MyAccountPage(driver);
         myPage.goToMyAccount();
         myPage.goToMyHistory();
@@ -41,8 +37,7 @@ public class MyAccountTest extends BaseTest{
     }
 
     @Test (groups = {"Smoke"}, dependsOnMethods = "myHomePage")
-    public void changePersonalInfoTest(Method method) {
-        test = ExtentTestManager.startTest(method.getName(), "");
+    public void changePersonalInfoTest() {
         MyAccountPage myPage = new MyAccountPage(driver);
         myPage.goToMyAccount();
         myPage.goToPersonalInfo();
@@ -53,8 +48,7 @@ public class MyAccountTest extends BaseTest{
     }
 
     @Test(groups = {"Smoke"}, dependsOnMethods = "myHomePage")
-    public void updateAddressTest(Method method) {
-        test = ExtentTestManager.startTest(method.getName(), "");
+    public void updateAddressTest() {
         MyAccountPage myPage = new MyAccountPage(driver);
         myPage.goToMyAccount();
         myPage.gotToMyAddress();
