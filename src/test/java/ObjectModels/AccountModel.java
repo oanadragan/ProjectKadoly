@@ -1,6 +1,5 @@
 package ObjectModels;
 
-import javax.xml.bind.annotation.XmlElement;
 
 public class AccountModel {
 
@@ -11,7 +10,6 @@ public class AccountModel {
             return username;
         }
 
-        @XmlElement
         public void setUsername(String username) {
             this.username = username;
         }
@@ -20,7 +18,6 @@ public class AccountModel {
             return password;
         }
 
-        @XmlElement
         public void setPassword(String password) {
             this.password = password;
         }

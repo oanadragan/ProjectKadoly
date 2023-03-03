@@ -1,6 +1,5 @@
 package ObjectModels;
 
-import javax.xml.bind.annotation.XmlElement;
 
 public class LoginModel{
 
@@ -25,28 +24,16 @@ public class LoginModel{
         return account;
     }
 
-    @XmlElement
-    public void setAccount(AccountModel account) {
-        this.account = account;
-    }
 
     public String getUserError() {
         return userError;
     }
 
-    @XmlElement
-    public void setUserError(String userError) {
-        this.userError = userError;
-    }
 
     public String getPasswordError() {
         return passwordError;
     }
 
-    @XmlElement
-    public void setPasswordError(String passwordError) {
-        this.passwordError = passwordError;
-    }
 
 
 

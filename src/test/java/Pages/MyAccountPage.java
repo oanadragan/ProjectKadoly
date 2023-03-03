@@ -10,7 +10,6 @@ public class MyAccountPage extends BasePage{
 
 
     private String myAccount = "#header_links > li:nth-child(6)"; //CSS
-
     private String myAccountText = "#center_column > p"; //CSS
     private String myHistory = "#center_column > div.row.addresses-lists > div:nth-child(1) > ul > li:nth-child(1) > a"; //CSS
     private String myCredits = "#center_column > div.row.addresses-lists > div:nth-child(1) > ul > li:nth-child(2) > a"; //CSS
