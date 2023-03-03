@@ -5,17 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e50149de-8deb-4395-91c4-bf76dde0e4c5" name="Changes" comment="Final Project">
-      <change afterPath="$PROJECT_DIR$/src/test/Resources/Data/CartTestData.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/DataUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/ExcelReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/Resources/Data/MyAccountData.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/CartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/CartTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/EmailRegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/EmailRegistrationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/EmailRegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/EmailRegistrationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/MyAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/MyAccountTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Utils/ConstantUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utils/ConstantUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Utils/Tools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utils/Tools.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Utils/DataUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utils/DataUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -421,7 +417,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677831108467</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Final Project">
+      <created>1677852748459</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1677852748459</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

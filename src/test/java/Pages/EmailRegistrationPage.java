@@ -15,8 +15,10 @@ public class EmailRegistrationPage extends BasePage{
 
 
     public void verifyPage() {
-        Assert.assertEquals(driver.findElement(By.xpath(authenticationText)).getText(), "AUTENTIFICARE");
-        Assert.assertEquals(driver.findElement(By.xpath(createAccountText)).getText(), "Te rugam sa introduci adresa de e-mail pentru a crea un cont.");
+        Assert.assertEquals(driver.findElement(By.xpath(authenticationText)).getText(),
+                "AUTENTIFICARE");
+        Assert.assertEquals(driver.findElement(By.xpath(createAccountText)).getText(),
+                "Te rugam sa introduci adresa de e-mail pentru a crea un cont.");
     }
 
     public void registrationPage1(String username) {

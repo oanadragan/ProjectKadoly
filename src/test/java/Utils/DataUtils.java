@@ -4,6 +4,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -25,7 +26,15 @@ public class DataUtils {
         return readJson(ConstantUtils.CART_FILE, "check cart");
     }
 
+    @DataProvider
+    public static Object[][] accountTestDp() {
+        return readJson(ConstantUtils.MY_ACCOUNT_FILE, "my account");
+    }
 
+    @DataProvider
+    public static Object[][] emailRegistrationDp() {
+        return readJson(ConstantUtils.MY_ACCOUNT_FILE, "email registration");
+    }
 
     public static Object[][] readJson(String filename, String jsonObj) {
         File file = new File(filename);

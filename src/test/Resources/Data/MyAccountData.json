@@ -1,0 +1,22 @@
+{
+  "my account": [
+ {
+      "email": "test2@gmail.com",
+      "password": "12345678",
+      "first name": "Oana",
+      "last name": "Dragan",
+      "conf text": "Informatile personale au fost actualizate.",
+      "city": "Giroc",
+      "address": "Strada 1",
+      "postal code": "111111",
+      "phone no": "1234512345",
+      "full address": "Giroc, Strada 1"
+ }
+  ],
+  "email registration": [
+    {
+      "email": "test2@gmail.com",
+      "error message": "Exista deja un cont cu aceeasi adresa de e-mail. Introdu parola sau cere una noua."
+    }
+  ]
+}
